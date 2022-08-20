@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0A0C1C;
+    font-family: 'Inter';
+    font-style: normal;
+    color: white;
+}
+
+.overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1080px;
+    height: 446px;
+    background-color: #1B1937;
+    border-radius: 8px;
+}
+
+.infos-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-height: 446px;
+}
+
+.title {
+    margin-right: 95px;
+    margin-left: 71px;
+    margin-top: 31px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+.paragraph {
+    margin-left: 71px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.75;
+    width: 374px;
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    column-gap: 100px;
+    margin-left: 71px;
+    column-gap: 60px;
+    max-height: 56px;
+}
+
+.companies-p,
+.templates-p,
+.queries-p {
+    height: 56px;
+    width: 83px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 30px;
+}
+
+.end {
+    font-family: 'Lexend Deca';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.6;
+}
+
+.top {
+    color: #AB5CDB;
+}
+
+.picture {
+    overflow: hidden;
+}
+
+.img-desktop {
+    object-fit: fill;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    filter: grayscale(100%) brightness(40%) sepia(50%) hue-rotate(-125deg) saturate(600%) contrast(1);
+}
+
+.img-mobile {
+    opacity: 0;
+}
+
+@media (max-width: 850px) {
+    .main-container-grid {
+        grid-template-rows: 1f 240px;
+        height: 780px;
+        width: 327px;
+    }
+    .infos-grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-height: 300px;
+    }
+    .img-mobile {
+        opacity: 1;
+    }
+}
